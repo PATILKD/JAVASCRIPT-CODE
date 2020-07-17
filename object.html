@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>Objects in JS</title>
+        <script type="text/javascript">
+        var Car = {
+            car_brand:"Tesla",
+            car_model:"Model 3",
+            price:380000,
+            //method
+            teslaAutoPilot:function()
+            {
+               // return "<h2>This car has Autopilot feature</h2>";
+                document.write("<h2>This car has Autopilot feature</h2>");
+            }
+        }
+       // document.write("<h2>"+Car.car_brand+"</h2>");
+
+       //for removing undefined on output screen use return in fun
+       // document.write("<h2>"+Car.teslaAutoPilot()+"</h2>");
+       Car.teslaAutoPilot();
+        </script>
+    </head>
+<body></body>    
+</html>
