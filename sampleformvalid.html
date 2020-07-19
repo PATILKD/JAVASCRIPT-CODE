@@ -1,0 +1,29 @@
+<html>
+<head>
+    <title>Practise Example</title>
+    <script type="text/javascript">
+    function validate()
+    {
+        var fname=document.getElementById("fname");
+        var lname=document.getElementById("lname");
+        if(fname.value.trim()==""||lname.value.trim()=="")
+        {
+            alert("No blanks allowed");
+            return false;
+        }
+        else
+        {
+            return true;
+        }
+    }
+    </script>
+</head>
+<body>
+    <form onsubmit="return validate()"action="formvalidmsg.html">
+        <input id="fname" type="text" placeholder="Enter First Name : ">
+        <input id="lname" type="text" placeholder="Enter Last Name : ">
+        <button id="btn" type="submit">Submit</button>
+    </form>
+</body>
+
+</html>

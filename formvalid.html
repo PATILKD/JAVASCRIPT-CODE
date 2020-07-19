@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>Form Validation</title>
+        <script type="text/javascript">
+        function validate()
+        {
+            var username = document.getElementById("username");
+            var password = document.getElementById("pass");
+            if(username.value.trim()=="" ||password.value.trim()=="")
+            {
+                alert("NO BLANKS ARE ALLOWED");
+                return false;
+            } 
+            else
+            {
+                true;
+            }
+        }
+        </script>
+    </head>
+<body>
+    <!--action atrribute allow to get on another page -->
+    <form onsubmit="return validate()"  action="formvalidmsg.html">
+        <input id="username" type="text" placeholder="username" /><br><br>
+         <input id="pass" type="password" placeholder="password" /><br><br>
+         <button  type="submit">submit</button>
+    </form>
+</body>    
+</html>

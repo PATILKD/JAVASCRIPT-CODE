@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>Dom manipulations by class name</title>
+        <script type="text/javascript">
+        function changeStyle()
+        {
+        var element=document.getElementsByClassName("mypara");
+        for(var i=0;i<element.length;i++)
+        {
+            element[i].style.color="yellow";
+            element[i].style.fontSize=25;
+
+        }
+        }
+        </script>
+
+    </head>
+<body>
+    <p class="mypara">K D PATIL is Brand</p>
+    <p>K D PATIL is Brand</p>
+    <p class="mypara">K D PATIL is Brand</p>
+    <p>K D PATIL is Brand</p>
+    <p class="mypara">K D PATIL is Brand</p>
+    <p>K D PATIL is Brand</p>
+    <p>K D PATIL is Brand</p>
+    <a class="mypara" href="#">This anchor tag</a>
+    <br>
+    <button onclick="changeStyle
+    ()">Click Me</button>
+</body>
+</html>
