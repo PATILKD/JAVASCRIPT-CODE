@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>Regular exp in JS</title>
+        <script type="text/javascript">
+        function validate()
+        {
+            var username=document.getElementById("uname").value;
+           // var regx=/E00/i;//for case insensitive use this
+            var regx=/E00/;//match this text write like /E00/
+            if(regx.test(username))
+            {
+                //here test method test the username by comparing with regx it true valid otherwise invalid
+                alert("Valid Username");
+            }
+            else
+            {
+                alert("Invalid username");
+                document.getElementById("lbl1").style.visibility="visible";
+                uname.style.border="solid 3px red";
+            }
+        } 
+        </script>
+    </head>
+<body>
+<form  action="formvalidmsg.html">
+    <input id="uname" type="text" placeholder="Username "/><br>
+    <label id="lbl1" style="color:red; visibility:hidden">Invalid username</label><br><br>
+    <button onclick="validate()" type="button">Submit</button>
+</form>
+</body>
+</html>
