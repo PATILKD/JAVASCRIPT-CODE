@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <title>Email validation</title>
+        <script type="text/javascript">
+        /*
+        \d - match any digit equal to [0-9]
+        \w - match any word character (a-z,A-Z,0-9,and _(underscore)
+        \s - match whitespaces char (eg.-spaces and tabs)
+        \t - match a tab only
+        */
+        function validate()
+        {
+            var text=document.getElementById("text1").value;
+            // when ^ this outside square bracket that defines start point and $ denotes end of string
+            //yournm @ domain . extension (.extension optional)
+            //eg komal067@gmail.com or
+             //eg komal067@gmail.co.in this is optional
+
+             //1.any letters nos , . or hypens
+             //2.any letter nos , . and/or hypen(-)
+             //3.any letter a-z
+             //4.a dot(.) then any letter
+            var regx=/^([a-z 0-9\.-]+)@([a-z 0-9-]+).([a-z]{2,10})(.[a-z]{2,8})$/;
+            //curly braces for repeating how many times
+            if(regx.test(text))
+            {
+                document.getElementById("lbl").innerHTML="Valid";
+                document.getElementById("lbl").style.visibility="visible";
+                document.getElementById("lbl").style.color="green";
+            }
+            else
+            {
+                document.getElementById("lbl").innerHTML="Invalid";
+                document.getElementById("lbl").style.visibility="visible";
+                document.getElementById("lbl").style.color="red";
+
+            }
+        }
+        </script>
+    </head>
+<body>
+    <form>
+        <input id="text1" type="text" placeholder="Cellphone"/>
+        <label id="lbl" style="color:red; visibility:visible"></label>  <br>
+        <br>
+        <button onclick="validate()" type="button">Submit</button>  
+    </form>
+</body>    
+</html>
