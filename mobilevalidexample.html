@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>Mobile validation example</title>
+        <script type="text/javascript">
+       //1st char must be betn 5-9 , next 8 char have to be between a-z last char has to be zero 
+       function validate()
+       {
+           var text=document.getElementById("mob").value;
+           var regx=/^[5-9][a-z]{9}0$/;
+           if(regx.test(text))
+           {
+               document.getElementById("lbl").innerHTML="Valid";
+               document.getElementById("lbl").style.visibility="visible";
+               document.getElementById("lbl").style.color="green";
+           }
+           else
+            {
+                document.getElementById("lbl").innerHTML="Invalid";
+                document.getElementById("lbl").style.visibility="visible";
+                document.getElementById("lbl").style.color="red";
+
+            }
+       }
+       
+       </script>    
+    </head> 
+    <body>
+        <form>
+            <input id="mob" type="text" placeholder="Enter Mobile Number"/>
+            <label id="lbl" style="color:red;visibility:hidden">Invalid</label>
+            <br>
+            <br>
+            <button onclick="validate()" type="button">Submit</button>
+        </form>
+    </body>  
+</html>
