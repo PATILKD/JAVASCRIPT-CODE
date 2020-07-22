@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <title>Animation - zoomIn and zoomOut</title>
+        <script type="text/javascript">
+        var width=100;
+        var difference=2;
+        var intervalID=0;
+        function increase()
+        {
+            clearInterval(intervalID);
+            intervalID=setInterval(zoomIn,20);
+        }
+        function zoomIn()
+        {
+            if(width<200)
+            {
+                width=width+difference;
+                document.getElementById("img1").style.width=width;
+                //for checking value of interval
+                console.log(width);
+            }
+            else
+            {
+                clearInterval(intervalID);
+            }
+        }
+
+        function decrease()
+        {
+            clearInterval(intervalID);
+            intervalID=setInterval(zoomOut,20);    
+        }
+        function zoomOut()
+        {
+            if(width>100)
+            {
+                width=width-difference;
+                document.getElementById("img1").style.width=width;
+                //for checking value of interval
+                console.log(width);
+            }
+            else
+            {
+                clearInterval(intervalID);
+            }
+        }
+        </script>
+    </head>
+<body>
+    <br>
+    <br>
+    <!--<img onmouseover="alert('onmouseover');" onmouseout="alert('onmouseout')" id="img1" src="notebook-work-girl-computer-wallpaper.jpg" width="350px"/>-->
+    <img onmouseover="increase()" onmouseout="decrease()" id="img1" src="notebook-work-girl-computer-wallpaper.jpg" width="100px"/>
+</body>    
+</html>

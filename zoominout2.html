@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <title>zoom in zoom out another example</title>
+        <script type="text/javascript">
+        var width=100;
+        var difference=2;
+        var intervalID=2;
+        function expand()
+        {
+            clearInterval(intervalID);
+            intervalID=setInterval(zoomIn,10);
+        }
+
+        function zoomIn()
+        {
+            if(width<500)
+            {
+                width=width+difference;
+                document.getElementById("img1").style.width=width;
+                console.log(width);
+            }
+            else{
+                clearInterval(intervalID);
+            }
+        }
+
+        function shrink()
+        {
+            clearInterval(intervalID);
+            intervalID=setInterval(zoomOut,10);
+        }
+        function zoomOut()
+        {
+            if(width>100)
+            {
+                width=width-difference;
+                document.getElementById("img1").style.width=width;
+                console.log(width);
+            }
+            else{
+                clearInterval(intervalID);
+            }
+        }
+        </script>
+    </head>
+<body>
+    <br><br>
+    <img id="img1" src="mysign.jpg" width="100" onmouseover="expand()" onmouseout="shrink()"/>
+
+</body>    
+</html>
