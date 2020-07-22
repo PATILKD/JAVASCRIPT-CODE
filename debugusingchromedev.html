@@ -1,0 +1,21 @@
+<html>
+
+<head>
+    <title>Debugging in javascript using chrome dev tools console method</title>
+    <script type="text/javascript">
+    function add()
+    {
+        var a = document.getElementById("t1").value;
+        var b = document.getElementById("t2").value;
+        document.getElementById("op").innerHTML="Result = "+(a+b);
+        //console.log(a+b);
+    }
+    </script>
+</head>
+<body>
+    <input id="t1" type="text" placeholder="Text 1"/><br><br>
+    <input id="t2" type="text" placeholder="Text 2"/><br><br>
+    <button id="btn" onclick="add()">ADD</button>
+    <h2 id="op">Result = </h2>
+</body>
+</html>

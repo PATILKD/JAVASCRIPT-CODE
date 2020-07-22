@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>Timing finctions in JS</title>
+        <script type="text/javascript">
+        //setInterval (allows to execcute stmts REPEATEDLY )and clearInterval (clear timer set with setInterval)
+        var ID=0;
+        var seconds=0;
+        function printMsg()
+        {
+            document.getElementById("op").innerHTML=seconds+ " seconds";
+            seconds++;
+        }
+        function start()
+        {
+           ID=window.setInterval(printMsg,1000) ;//5sec=5000milisec
+        }
+        function stop()
+        {
+            window.clearInterval(ID);
+        }
+       </script>
+    </head>
+<body>
+
+        <button onclick="start()" id="btnAdd">start</button>
+        <h2 id="op">Some Text</h2>
+        <button onclick="stop()" id="btnStop">Stop</button>
+
+</body>    
+</html>

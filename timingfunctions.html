@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>Timing finctions in JS</title>
+        <script type="text/javascript">
+        //setTimeout and clearTimeout methods
+        //set time when to start functionality and when to stop also
+        var ID=0;
+        function printMsg()
+        {
+            document.getElementById("op").innerHTML="5 seconds have passed";
+        }
+        function start()
+        {
+                    //allows to execute stmts only once
+           ID=window.setTimeout(printMsg,5000) ;//5sec=5000milisec
+        }
+        function stop()
+        {
+            window.clearTimeout(ID);
+        }
+       </script>
+    </head>
+<body>
+
+        <button onclick="start()" id="btnAdd">start</button>
+        <h2 id="op">Some Text</h2>
+        <button onclick="stop()" id="btnStop">Stop</button>
+
+</body>    
+</html>
