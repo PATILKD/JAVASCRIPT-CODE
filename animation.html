@@ -4,10 +4,12 @@
         <script type="text/javascript">
         var opacity=0;
         var intervalID=0;//for stopping 
+        //visible to hidden
         function fadeOut()
         {
           intervalID= setInterval(hide,200);//if u want slower transition reduce that 200 number and if want faster increase it
         } 
+        //hidden to visible
         function fadeIn()
         {
           intervalID= setInterval(show,200);
@@ -22,7 +24,7 @@
           if(opacity<1)
           {
               opacity=opacity+0.1;
-              //for setting opacity after reducing below
+              //for setting opacity after increasing below
               img.style.opacity=opacity;
               //to show opacity value use console.log method
               console.log(opacity);
