@@ -1,0 +1,16 @@
+.mydiv{
+    border:2px solid blue;
+    margin: 5px;
+    padding: 10px;
+}
+div p{
+    color:black;
+}
+.mycube{
+    width: 100px;
+    height: 100px;
+    background-color:blue;
+   
+    position: absolute;
+    padding: 20px;
+}
