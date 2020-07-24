@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>chaining effect</title>
+        <link rel="stylesheet" href="css/style3.css">
+    </head>
+<body>
+    <button id="buttontoggle">Toggle</button>
+    <div id="firstdiv" class="mydiv">
+        <p>My favourite animal is Tiger</p>
+        <p>My favourite bird is peacock</p>
+    </div>
+    <div id="seconddiiv" class="mydiv">
+        <p>My hobby is reading books</p>
+    </div>
+
+</body>
+<script src="js/jquery.js" type="text/javascript"></script>
+<script >
+    $(document).ready(function(){
+
+        $("#buttontoggle").click(function(){
+        $("#firstdiv").slideUp(3000).slideDown(4000).fadeOut(3000).fadeIn(2000);//chaining effect perform multiple effect one after another
+    });
+});
+</script>

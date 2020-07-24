@@ -1,0 +1,27 @@
+<html>
+<head>
+<title>jQuery Dom manipulations</title>
+<link rel="stylesheet" type="text/css" href="css/style4.css">
+</head>
+
+
+<body>
+<h2>jQuery DOM manipulations</h2>
+<h2>text() method</h2>
+<button id="btn1">Action</button>
+<div id="div1" class="mydiv">
+    <p id="p1">This is the third <b>paragraph</b> in second division</p>
+</div>
+</body>
+<script src="js/jquery.js" type="text/javascript"></script>
+<script>
+    $(document).ready(function(){
+    $("#btn1").click(function(){
+        //var txt=$("#p1").text();//this method access text which is already on screen
+        //alert(txt);
+
+        //if u want to change text
+        $("#p1").text("K D PATIL");
+    });
+    });
+</script>
