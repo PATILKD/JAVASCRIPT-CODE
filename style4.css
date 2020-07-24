@@ -1,0 +1,9 @@
+
+.mydiv{
+    border:3px solid palevioletred;
+    margin: 5px;
+    padding: 10px;
+}
+div p{
+    color: purple;
+}

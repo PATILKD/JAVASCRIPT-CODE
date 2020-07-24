@@ -1,0 +1,9 @@
+.mydiv{
+    border:4px dotted purple;
+    margin: 10px;
+    padding: 10px;
+    background-color: salmon;
+}
+div p{
+    color: black;
+}
