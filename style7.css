@@ -1,0 +1,19 @@
+.mydivs{
+    border :5px double darkcyan;
+    margin: 10px;
+    padding: 15px;
+    font-size: larger;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 300;
+    background-color:rebeccapurple; 
+}
+
+.newdivclass{
+    border-radius: 10px;
+    background-color: aqua;
+}
+
+.newparaclass{
+    font-weight: bold;
+    color: brown;
+}
